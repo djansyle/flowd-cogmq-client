@@ -12,7 +12,6 @@ class Client extends cogmq.Client {
     return new Proxy(this, {
       get(target, property) {
         return (arg) => {
-          assert(isPlainObject(arg), 'Expecting argument to be a plain object.');
           return self.send.call(self, { action: property, content: arg });
         }
       }
