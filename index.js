@@ -1,6 +1,4 @@
 const cogmq = require('cogmq').default;
-const assert = require('assert');
-const isPlainObject = require('lodash.isplainobject');
 
 class Client extends cogmq.Client {
   constructor(options) {
